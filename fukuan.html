@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+	<title>1111</title>
+	<link href="css/css.css"  rel="stylesheet">
+	<style type="text/css">
+	body{padding: 40px 0 0 0;}
+	#all{width: 1224px;margin: 0 auto;border:1px solid #333;height: 924px;}
+	#div1{width: 390px;height: 690px;border: 1px solid gray;float: left;margin: 20px;}
+	#head{background:#1e1e1e;height: 28px;}
+	#p1{margin: 2px 9px 0 0;float: right;}
+	#sp1{color: #c6c6c6;font-weight: bold;line-height: 25px;font-size: 15px;}
+	#p2{background-image: url(./images/4.jpg);height: 61px;color: #fff;font-size: 18px;text-align: center;line-height: 60px;}
+	#main{background: #fff;}
+	#p3{height:49px;background: url(./images/7.png)  no-repeat; border-bottom: 1px dashed #b9b9b9; background-position:23px 9px; }
+	#sp2{font-size: 15px;color: #666c71;padding-left: 70px;line-height: 50px;}
+
+	.pading_01{margin-left: 23px;}
+	#p4{height: 110px;border-bottom: 2px solid #e5e5e5;}
+	#sp3{font-size: 15px;color: #919191;line-height: 45px;}
+	#sp4{font-size: 45px;color: #333333;float: right;padding-top: 1px;padding-right: 25px;}
+
+	#p5{font-size: 15px;border-bottom: 1px solid #c0c0c0;height: 109px;line-height: 35px;}
+	#sp5{color:#919191; }
+	#sp6{color: #625e5a;}
+	#sp7{color: #625e5a;}
+
+
+	#p6{height: 79px;border-bottom: 1px solid #c0c0c0;font-size: 15px;}
+	#sp8{color:#919191;line-height: 45px;}
+	#sp9{color:#625e5a;}
+
+	#p7{height: 179px;font-size: 15px;color:#919191;}
+	#sp10{line-height: 40px;}
+	#sp11{line-height: 20px;}
+	#sp12{line-height: 40px;}
+	#sp13{line-height: 20px;}
+	#sp17{color:#625e5a;font-size: 15px;}
+
+
+	#p8{background:url(./images/10.png);height: 70px;}
+	#img_01{padding-left: 155px;}
+	#sp14{text-align: center;line-height: 70px; }
+	#sp15{padding-left: 50px;letter-spacing:1px;}
+
+	.spa1{padding-left: 36px;color:#625e5a;font-size: 15px; }
+	.spa2{color:#625e5a;font-size: 15px;letter-spacing:1px;}
+	#sp16{padding-left: 95px;color:#625e5a;letter-spacing:1px;}
+	.sele{margin: 20px;line-height: 30px;}
+
+	#sele_08{display: none;}
+	#text_07{display: none;}
+	#but_08 {display: none;}
+	.red{color: red;}
+
+
+	.pic1{display: inline-block;}
+	#one{display: inline-block;}
+	#tow{display: inline-block;}
+	#ul1{width: 94px;}
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+		
+		var oBut4 = document.getElementById('but_04');
+		
+		var oBut6 = document.getElementById('but_06');
+		var oBut7 = document.getElementById('but_07');
+		var oBut8 = document.getElementById('but_08');
+		var oBut9 = document.getElementById('but_09');
+		
+		var oText3 = document.getElementById('text_03');
+		
+		var oText5 = document.getElementById('text_05');
+		var oText6 = document.getElementById('text_06');
+		var oText7 = document.getElementById('text_07');
+		var oText8 = document.getElementById('text_08');
+		var oRad1 = document.getElementById('rad1');
+		var oRad2 = document.getElementById('rad2');
+
+
+		var oPci1 = document.getElementById('pic_1');
+    	var oPci2 = document.getElementById('pic_2');
+    	var oPci3 = document.getElementById('pic_3');
+    	var oAnq = document.getElementById('anq');
+    	var oQq = document.getElementById('qq');
+    	var oWeix = document.getElementById('weix');
+    	var off1 = true;
+    	var off2 = true;
+    	var off3 = true;
+		// var nub = /^\d{n}$/;
+		var n = oText3.value;
+
+		// 时间修改
+		var oSele1 = document.getElementById('sele_01');
+		var oSele2 = document.getElementById('sele_02');
+		var oBut1 = document.getElementById('but_01');
+		var oSp1 = document.getElementById('sp1');
+		var oSp17 = document.getElementById('sp17');
+		
+		// 姓名修改
+		var oBut2 = document.getElementById('but_02');
+		var oText1 = document.getElementById('text_01');
+		var oSp2 = document.getElementById('sp2');
+		var oSp6 = document.getElementById('sp6');
+
+		//转账金额 
+		var oBut3 = document.getElementById('but_03');
+		var oText2 = document.getElementById('text_02');
+		var oSp4 = document.getElementById('sp4');
+
+		// 转账理由
+		var oSp9 = document.getElementById('sp9');
+		var oText4 = document.getElementById('text_04');
+		var oBut5 = document.getElementById('but_05');
+
+		// 创建时间
+		var oSele3 = document.getElementById('sele_03');
+		var oSele4 = document.getElementById('sele_04');
+		var oSele5 = document.getElementById('sele_05');
+		var oSele6 = document.getElementById('sele_06');
+		var oSele7 = document.getElementById('sele_07');
+		var oSele8 = document.getElementById('sele_08');
+		var oSpa1 = document.getElementById('spa1');
+		var oSp15 = document.getElementById('sp15');
+		var oSp7 = document.getElementById('sp7');
+
+		// 交易号
+		var oSp18 = document.getElementById('sp18');
+		var oSp16 = document.getElementById('sp16');
+		var num = 999;
+		var oSpa16 = oText4.value;
+
+		// 时间修改
+		oBut1.onclick = function(){
+			oSp1.innerHTML = oSele1.value + ':' + oSele2.value;
+		};
+
+		// 姓名修改
+		oBut2.onclick = function(){
+			oSp2.innerHTML = oText1.value;
+			oSp6.innerHTML = oText1.value;
+			oText1.value = '';
+		};
+		
+		//转账金额
+		oBut3.onclick = function(){
+			oSp4.innerHTML = '+' + oText2.value + '.00';
+			oText2.value = '';
+		};
+
+
+		// 邮箱或手机  '12345678901'.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2');   此段正则匹配字符串中的连续11位数字，替换中间4位为*号，输出常见的隐匿手机号的格式。
+
+		// 转账理由
+		oBut5.onclick = function(){
+			oSp9.innerHTML = oText4.value;
+			oText4.value = '';
+		};
+
+		// 创建时间
+		oBut6.onclick = function(){
+			oSpa1.innerHTML = oSele3.value + '-' + oSele4.value + '-' + oSele5.value;
+			oSp15.innerHTML = oSele3.value + oSele4.value + oSele5.value;
+			oSp17.innerHTML = oSele6.value + ':' +  oSele7.value;
+		};
+
+		// 交易号
+		oBut7.onclick =function(){
+			var i = oText6.value; 
+			// var i = /^d{3}$/;
+			if ( i < 999) {
+				oSp16.innerHTML = oText6.value;
+				oText6.value = '';
+			} else {
+				
+				alert('请输入三位数字');
+			}
+		};
+
+		oBut9.onclick = function(){
+			var ok = oText8.value;
+			if (ok < 99999) {
+				oSp18.innerHTML = oText8.value;
+				oText8.value = '';
+			}else{
+
+				alert('请输入五个数');
+			}
+			
+		};
+
+		// 邮箱
+		// oBut4.onclick = function(){
+		// 	if (offt == true) {
+		// 		if ( n < nub ) {
+		// 			oSp7.innerHTML = oText3.value;
+		// 		} else {
+		// 				alert('请输入正确的号码');
+		// 		}
+				
+		// 	}else {
+		// 		oSp7.innerHTML = oText3.value + oSele8.value;
+		// 	}
+			
+		// };
+
+		// 判断
+
+
+
+		oRad1.onclick = function(){
+			oSele8.style.display = 'none';
+			oText3.style.display = 'inline-block';
+			oText7.style.display = 'none';
+			oBut4.style.display = 'inline-block';
+			oBut8.style.display = 'none';
+		};
+		oRad2.onclick = function(){
+			oText7.style.display = 'inline-block';
+			oSele8.style.display = 'inline-block';
+			oText3.style.display = 'none';
+			oBut4.style.display = 'none';
+			oBut8.style.display = 'inline-block';
+		};
+		oBut4.onclick = function(){
+			oSp7.innerHTML = oText3.value;
+			oText3.value = '';
+		};	
+		oBut8.onclick = function(){
+			oSp7.innerHTML = oText7.value + oSele8.value;
+			oText7.value = '';
+		};
+
+
+		    	oAnq.onclick = function(){
+    		if (off3 == true) {
+    			oPci1.style.display = 'none';
+    			off3 = false;
+    		}else{
+    			oPci1.style.display = 'inline-block';
+    			off3 = true;
+    		}
+    		
+    	};
+
+
+    	oQq.onclick = function(){
+    		if (off1 == true) {
+    			oPci2.style.display = 'none';
+    			off1 = false;
+    		}else{
+    			oPci2.style.display = 'inline-block';
+    			off1 = true;
+    		}
+    		
+    	};
+    	oWeix.onclick = function(){
+    		if (off2 == true) {
+    			oPci3.style.display = 'none';
+    			off2 = false;
+    		}else{
+    			oPci3.style.display = 'inline-block';
+    			off2 = true;
+    		}
+    		
+
+    	};
+	};
+	</script>
+</head>
+<body>
+	<div id="all">
+	<div id="div1">
+		<div id="head" class="fix">
+			<div id="one">
+					<ul id="ul1">
+						<li id="pic_1" class="pic1"><img src="./images/2016_01.png"></li>
+						<li id="pic_2" class="pic1"><img src="./images/2016_02.png"></li>
+						<li id="pic_3" class="pic1"><img src="./images/2016_03.png"></li>
+					</ul>
+				</div>
+				<div id="tow"><img src="./images/2016_04.png"></div>
+			<p id="p1"><span id="sp1">09:28</span></p>
+		</div>
+		<p id="p2">账单详情</p>
+		<div id="main">
+			<p id="p3">
+				<span id="sp2">陈贺</span>
+			</p>
+			<p id="p4" class="pading_01">
+				<span id="sp3">转账金额</span><br/>
+				<span id="sp4">+7240.00</span>
+			</p>
+			<p id="p5"class="pading_01">
+				<span id="sp5">对方账号</span><br/>
+				<span id="sp6">陈贺</span><br/>
+				<span id="sp7">szl***@163.com</span>
+			</p>
+			<p id="p6"class="pading_01">
+				<span id="sp8">理由</span><br/>
+				<span id="sp9">转账返款</span>
+			</p>
+			<p id="p7"class="pading_01">
+				<span id="sp10">订单信息</span><br/>
+				<span id="sp11">交易类型</span><span class="spa1">即时到账</span><br/>
+				<span id="sp12">创建时间</span><span class="spa1" id="spa1">2015-12-06</span> <span id="sp17">09:22</span><br/>
+				<span id="sp13">交易号</span><span class="spa1" id="sp15">20151206</span><span class="spa2">2462403524</span><span class="spa2" id="sp18">62535</span><br/>
+				<span id="sp16">042</span>
+			</p>
+			<p id="p8">
+				<img id="img_01" src="./images/11.png">
+				<span id="sp14">交易成功</span>
+			</p>
+		</div>
+	</div>
+	<div class="sele">
+		<!--时间 -->
+		图标取消：360<input id="anq" type="checkbox" name="tubiao" value="360"checked="checked" />
+				  QQ<input id="qq" type="checkbox" name="tubiao" value="QQ"checked="checked" />
+		     	  微信<input id="weix" type="checkbox" name="tubiao" value="微信"checked="checked"/><br>
+		时间：<select id="sele_01">
+				<option value="01">01</option>
+				<option value="02">02</option>
+				<option value="03">03</option>
+				<option value="04">04</option>
+				<option value="05">05</option>
+				<option value="06">06</option>
+				<option value="07">07</option>
+				<option value="08">08</option>
+				<option value="09">09</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+				<option value="21">21</option>
+				<option value="22">22</option>
+				<option value="23">23</option>
+				<option value="24">24</option>
+			  </select>
+			  <span>时</span>
+			  <select id="sele_02">
+			  	<option value="01">01</option>
+			  	<option value="02">02</option>
+			  	<option value="03">03</option>
+			  	<option value="04">04</option>
+			  	<option value="05">05</option>
+			  	<option value="06">06</option>
+			  	<option value="07">07</option>
+			  	<option value="08">08</option>
+			  	<option value="09">09</option>
+			  	<option value="10">10</option>
+			  	<option value="11">11</option>
+			  	<option value="12">12</option>
+			  	<option value="13">13</option>
+			  	<option value="14">14</option>
+			  	<option value="15">15</option>
+			  	<option value="16">16</option>
+			  	<option value="17">17</option>
+			  	<option value="18">18</option>
+			  	<option value="19">19</option>
+			  	<option value="20">20</option>
+			  	<option value="21">21</option>
+			  	<option value="22">22</option>
+			  	<option value="23">23</option>
+			  	<option value="24">24</option>
+			  	<option value="25">25</option>
+			  	<option value="26">26</option>
+			  	<option value="27">27</option>
+			  	<option value="28">28</option>
+			  	<option value="29">29</option>
+			  	<option value="30">30</option>
+			  	<option value="31">31</option>
+			  	<option value="32">32</option>
+			  	<option value="33">33</option>
+			  	<option value="34">34</option>
+			  	<option value="35">35</option>
+			  	<option value="36">36</option>
+			  	<option value="37">37</option>
+			  	<option value="38">38</option>
+			  	<option value="39">39</option>
+			  	<option value="40">40</option>
+			  	<option value="41">41</option>
+			  	<option value="42">42</option>
+			  	<option value="43">43</option>
+			  	<option value="44">44</option>
+			  	<option value="45">45</option>
+			  	<option value="46">46</option>
+			  	<option value="47">47</option>
+			  	<option value="48">48</option>
+			  	<option value="49">49</option>
+			  	<option value="50">50</option>
+			  	<option value="51">51</option>
+			  	<option value="52">52</option>
+			  	<option value="53">53</option>
+			  	<option value="54">54</option>
+			  	<option value="55">55</option>
+			  	<option value="56">56</option>
+			  	<option value="57">57</option>
+			  	<option value="58">58</option>
+			  	<option value="59">59</option>
+			  	<option value="24">24</option>
+			  	
+			    </select>
+			    <span>分</span>
+			  <input type="button" value="确定" id="but_01"><br/>
+			  姓名：<input type="text" id="text_01"><input type="button" value="确定" id="but_02"><br/>
+
+			  转账金额：<input type="text" id="text_02"><input type="button" value="确定" id="but_03"><br/>
+
+			  邮箱或手机：
+			  手机<input id="rad1" type="radio" name="xingbie" value="手机"checked="checked"/>
+			  邮箱<input id="rad2" type="radio" name="xingbie" value="邮箱"/>
+			  	<input type="text" id="text_03">
+			  	<input type="text" id="text_07">
+			  	<select id="sele_08">
+			  	<option value="@qq.com">@qq.com</option>
+			  	<option value="@163.com">@163.com</option>
+			  	<option value="@189.cn">@189.cn</option>
+			  </select>
+			  	<input type="button" value="确定" id="but_04">
+			  	<input type="button" value="确定" id="but_08">例子：<span class='red'>邮箱szl***</span>手机 <span class='red'>134****7940</span> 
+			  	<br/>
+
+			  转账理由：<input type="text" id="text_04"><input type="button" value="确定" id="but_05"><br/>
+
+			  创建时间：
+			    <select id="sele_03">
+			  	<option value="2011">2011</option>
+			  	<option value="2012">2012</option>
+			  	<option value="2013">2013</option>
+			  	<option value="2014">2014</option>
+			  	<option value="2015" selected="selected">2015</option>
+			  	<option value="2016">2016</option>
+			  	<option value="2017">2017</option>
+			  	<option value="2018">2018</option>
+			    </select>
+			    <span>年</span>
+			    
+			    <select id="sele_04">
+			  	<option value="01">01</option>
+			  	<option value="02">02</option>
+			  	<option value="03">03</option>
+			  	<option value="04">04</option>
+			  	<option value="05">05</option>
+			  	<option value="06">06</option>
+			  	<option value="07">07</option>
+			  	<option value="08">08</option>
+			  	<option value="09">09</option>
+			  	<option value="10">10</option>
+			  	<option value="11">11</option>
+			  	<option value="12"selected="selected">12</option>
+			    </select>
+			    <span>月</span>
+			    
+			    <select id="sele_05">
+			  	<option value="01">01</option>
+			  	<option value="02">02</option>
+			  	<option value="03">03</option>
+			  	<option value="04">04</option>
+			  	<option value="05">05</option>
+			  	<option value="06"selected="selected">06</option>
+			  	<option value="07">07</option>
+			  	<option value="08">08</option>
+			  	<option value="09">09</option>
+			  	<option value="10">10</option>
+			  	<option value="11">11</option>
+			  	<option value="12">12</option>
+			  	<option value="13">13</option>
+			  	<option value="14">14</option>
+			  	<option value="15">15</option>
+			  	<option value="16">16</option>
+			  	<option value="17">17</option>
+			  	<option value="18">18</option>
+			  	<option value="19">19</option>
+			  	<option value="20">20</option>
+			  	<option value="21">21</option>
+			  	<option value="22">22</option>
+			  	<option value="23">23</option>
+			  	<option value="24">24</option>
+			  	<option value="25">25</option>
+			  	<option value="26">26</option>
+			  	<option value="27">27</option>
+			  	<option value="28">28</option>
+			  	<option value="29">29</option>
+			  	<option value="30">30</option>
+			    </select>
+			    <span>日</span>
+			  	
+			  	<select id="sele_06">
+				<option value="01">01</option>
+				<option value="02">02</option>
+				<option value="03">03</option>
+				<option value="04">04</option>
+				<option value="05">05</option>
+				<option value="06">06</option>
+				<option value="07">07</option>
+				<option value="08">08</option>
+				<option value="09">09</option>
+				<option value="10"selected="selected">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+				<option value="21">21</option>
+				<option value="22">22</option>
+				<option value="23">23</option>
+				<option value="00">00</option>
+			  </select>
+			  <span>时</span>
+			  
+			  <select id="sele_07">
+			  	<option value="01">01</option>
+			  	<option value="02">02</option>
+			  	<option value="03">03</option>
+			  	<option value="04">04</option>
+			  	<option value="05">05</option>
+			  	<option value="06">06</option>
+			  	<option value="07">07</option>
+			  	<option value="08">08</option>
+			  	<option value="09">09</option>
+			  	<option value="10">10</option>
+			  	<option value="11">11</option>
+			  	<option value="12">12</option>
+			  	<option value="13">13</option>
+			  	<option value="14">14</option>
+			  	<option value="15">15</option>
+			  	<option value="16">16</option>
+			  	<option value="17">17</option>
+			  	<option value="18">18</option>
+			  	<option value="19">19</option>
+			  	<option value="20">20</option>
+			  	<option value="21">21</option>
+			  	<option value="22">22</option>
+			  	<option value="23">23</option>
+			  	<option value="24">24</option>
+			  	<option value="25"selected="selected">25</option>
+			  	<option value="26">26</option>
+			  	<option value="27">27</option>
+			  	<option value="28">28</option>
+			  	<option value="29">29</option>
+			  	<option value="30">30</option>
+			  	<option value="31">31</option>
+			  	<option value="32">32</option>
+			  	<option value="33">33</option>
+			  	<option value="34">34</option>
+			  	<option value="35">35</option>
+			  	<option value="36">36</option>
+			  	<option value="37">37</option>
+			  	<option value="38">38</option>
+			  	<option value="39">39</option>
+			  	<option value="40">40</option>
+			  	<option value="41">41</option>
+			  	<option value="42">42</option>
+			  	<option value="43">43</option>
+			  	<option value="44">44</option>
+			  	<option value="45">45</option>
+			  	<option value="46">46</option>
+			  	<option value="47">47</option>
+			  	<option value="48">48</option>
+			  	<option value="49">49</option>
+			  	<option value="50">50</option>
+			  	<option value="51">51</option>
+			  	<option value="52">52</option>
+			  	<option value="53">53</option>
+			  	<option value="54">54</option>
+			  	<option value="55">55</option>
+			  	<option value="56">56</option>
+			  	<option value="57">57</option>
+			  	<option value="58">58</option>
+			  	<option value="59">59</option>
+			  	<option value="00">00</option>
+			    </select>
+			    <span>分</span>
+			   <input type="button" value="确定" id="but_06">
+			  <br/>
+
+			  交易号：
+			  第一行后五位：<input type="text" id="text_08"><input type="button" value="确定" id="but_09"><br/>
+			  后三位：<input type="text" id="text_06"><input type="button" value="确定" id="but_07"><br/>
+			  
+	</div>
+	</div>
+</body>
+</html>

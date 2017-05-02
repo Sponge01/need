@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <title></title>
+    <link href="css/css.css"  rel="stylesheet">
+    <!--[if lt IE 9]><script src="js/html5.js" ></script><![endif]-->
+    <style type="text/css">
+    body{padding: 40px 0 0 0;}
+	#all{width: 1224px;margin: 0 auto;border:1px solid #333;height: 924px;}
+	#div1{width: 390px;height: 619px;border: 1px solid gray;float: left;margin: 20px;}
+	#head{background:#1e1e1e;height: 28px;}
+	
+	#p1{margin: 2px 9px 0 0;float: right;display: inline-block;}
+	#sp1{color: #c6c6c6;font-weight: bold;line-height: 25px;font-size: 15px;}
+	
+	#p2{background-image: url(./images/4.jpg);height: 61px;color: #fff;font-size: 18px;text-align: center;line-height: 60px;}
+	#spa1{padding-left: 33px;}
+
+	#p3{background: url(./images/201_021.png) no-repeat;height: 105px;background-color: #efeff4;background-position-y:10px;}
+
+	#p4{height: 287px;background: url(./images/203.png)no-repeat;background-color: #efeff4;background-position: 26px;}
+
+	#p5{background: url(./images/201_04.png)  no-repeat;background-color: #efeff4;height: 138px;background-position: 26px;}
+
+	#sp3_1{line-height: 84px;padding-left: 10px;color: #b0afac;font-size: 13px;}
+
+	#sp3_2{padding-left: 108px;font-size: 16px;color: #000;}
+
+	#sp4_1{color: #cecece;font-size: 14px;}
+	#sp4_2{font-size: 16px;color: #000;}
+
+	#sp5_1{color: #4687ff;font-size: 14px;font-weight: bold;}
+	#sp5_2{color: #4687ff;font-size: 14px;font-weight: bold;}
+	#sp5_3{font-size: 16px;color: #000;}
+
+	#img_01{float: right;padding-top: 6px;}
+
+	.p4_01{display: block;line-height: 25px;}
+	.p5_01{}
+	.sele{margin: 20px;line-height: 30px;}
+
+	#pp4{margin: 0 auto; text-align: center;padding-top: 108px;}
+	#pp5{margin: 0 auto; text-align: center;padding-top: 35px;}
+	#ccs{color: red;font-weight: bold;font-size: 15px;}
+
+
+	.pic1{display: inline-block;}
+	#one{display: inline-block;}
+	#tow{display: inline-block;}
+	#ul1{width: 94px;}
+
+    </style>
+
+
+    <script type="text/javascript">
+    window.onload = function(){
+    	var oBut1 = document.getElementById('but_01');
+    	var oBut2 = document.getElementById('but_02');
+    	var oBut3 = document.getElementById('but_03');
+    	var oBut4 = document.getElementById('but_04');
+    	var oText3 = document.getElementById('text_03');
+
+
+    	var oPci1 = document.getElementById('pic_1');
+    	var oPci2 = document.getElementById('pic_2');
+    	var oPci3 = document.getElementById('pic_3');
+
+
+    	var oSpa3 = document.getElementById('sp3_2');
+    	var oSpa4 = document.getElementById('sp3_1');
+    	var oSele3 = document.getElementById('sele_03');
+    	var oSele4 = document.getElementById('sele_04');
+
+    	var oAnq = document.getElementById('anq');
+    	var oQq = document.getElementById('qq');
+    	var oWeix = document.getElementById('weix');
+    	var off1 = true;
+    	var off2 = true;
+    	var off3 = true;
+
+
+    	oAnq.onclick = function(){
+    		if (off3 == true) {
+    			oPci1.style.display = 'none';
+    			off3 = false;
+    		}else{
+    			oPci1.style.display = 'inline-block';
+    			off3 = true;
+    		}
+    		
+    	};
+
+
+    	oQq.onclick = function(){
+    		if (off1 == true) {
+    			oPci2.style.display = 'none';
+    			off1 = false;
+    		}else{
+    			oPci2.style.display = 'inline-block';
+    			off1 = true;
+    		}
+    		
+    	};
+    	oWeix.onclick = function(){
+    		if (off2 == true) {
+    			oPci3.style.display = 'none';
+    			off2 = false;
+    		}else{
+    			oPci3.style.display = 'inline-block';
+    			off2 = true;
+    		}
+    		
+
+    	};
+		
+
+    	// 手机时间
+    	oBut1.onclick = function(){
+    		var oSele1 = document.getElementById('sele_01');
+    		var oSele2 = document.getElementById('sele_02');
+    		var oSp1 = document.getElementById('sp1');
+
+    		oSp1.innerHTML = oSele1.value + ':' + oSele2.value;
+    	};
+
+    	oBut2.onclick = function(){
+			oSpa3.innerHTML = oSele3.value + '年' + oSele4.value + '月';
+    	};
+
+    	oBut3.onclick =function(){
+    		var oSp4 = document.getElementById('sp4_2');
+    		var oText1 = document.getElementById('text_01');
+    		var oText2 = document.getElementById('text_02');
+    		var oSp5  =document.getElementById('sp5_3');
+    		var off = oText2.value; 
+    		if (off > 999) {
+    			alert('百位请输入三位数');
+    		} else{
+    			oSp4.innerHTML = oText1.value + ',' + oText2.value + '.00元';
+    			oSp5.innerHTML = oText1.value + ',' + oText2.value + '.00元';
+    			oText1.value = '';
+    			oText2.value = '';
+    		}
+		};
+		oBut4.onclick = function(){
+			oSpa4.innerHTML = oText3.value + '月';
+			oText3.value = '';
+		};
+
+    };
+    </script>
+</head>
+<body>
+	<div id="all">
+		<div id="div1">
+			<div id="head" class="fix">
+				<!-- <img src="./images/1.jpg"> -->
+				<div id="one">
+					<ul id="ul1">
+						<li id="pic_1" class="pic1"><img src="./images/2016_01.png"></li>
+						<li id="pic_2" class="pic1"><img src="./images/2016_02.png"></li>
+						<li id="pic_3" class="pic1"><img src="./images/2016_03.png"></li>
+					</ul>
+				</div>
+				<div id="tow"><img src="./images/2016_04.png"></div>
+				<p id="p1"><span id="sp1">09:28</span></p>
+
+			</div>
+				<p id="p2">
+					<span id="spa1">对账单</span>
+					<img id="img_01" src="./images/031_01.png">
+				</p>
+				<p id="p3">
+					<span id="sp3_1">11月</span>
+					<span id="sp3_2">2015年12月</span>
+				</p>
+				<div id="p4">
+					<p id="pp4">
+					<span id="sp4_1" class="p4_01">总收入</span>
+					<span id="sp4_2" class="p4_01 fix">3,000.00元</span>
+					<span id="sp4_3" class="p4_01"><img src="./images/09.png"></span>
+					</p>
+				</div>
+				<div id="p5">
+					<p id="pp5">
+					<span id="sp5_1" class="p5_01">转账</span>   
+					<span id="sp5_2" class="p5_01">100.00%</span><br/>
+					<span id="sp5_3" class="p5_01">3,000.00元</span>
+					</p>
+				</div>
+		</div>
+		<div class="sele">
+				图标取消：360<input id="anq" type="checkbox" name="tubiao" value="360"checked="checked" />
+						  QQ<input id="qq" type="checkbox" name="tubiao" value="QQ"checked="checked" />
+		     			  微信<input id="weix" type="checkbox" name="tubiao" value="微信"checked="checked"/><br>
+			    手机时间：<select id="sele_01">
+				<option value="01">01</option>
+				<option value="02">02</option>
+				<option value="03">03</option>
+				<option value="04">04</option>
+				<option value="05">05</option>
+				<option value="06">06</option>
+				<option value="07">07</option>
+				<option value="08">08</option>
+				<option value="09">09</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+				<option value="21">21</option>
+				<option value="22">22</option>
+				<option value="23">23</option>
+				<option value="24">24</option>
+			  </select>
+			  <span>时</span>
+			  <select id="sele_02">
+			  	<option value="01">01</option>
+			  	<option value="02">02</option>
+			  	<option value="03">03</option>
+			  	<option value="04">04</option>
+			  	<option value="05">05</option>
+			  	<option value="06">06</option>
+			  	<option value="07">07</option>
+			  	<option value="08">08</option>
+			  	<option value="09">09</option>
+			  	<option value="10">10</option>
+			  	<option value="11">11</option>
+			  	<option value="12">12</option>
+			  	<option value="13">13</option>
+			  	<option value="14">14</option>
+			  	<option value="15">15</option>
+			  	<option value="16">16</option>
+			  	<option value="17">17</option>
+			  	<option value="18">18</option>
+			  	<option value="19">19</option>
+			  	<option value="20">20</option>
+			  	<option value="21">21</option>
+			  	<option value="22">22</option>
+			  	<option value="23">23</option>
+			  	<option value="24">24</option>
+			  	<option value="25">25</option>
+			  	<option value="26">26</option>
+			  	<option value="27">27</option>
+			  	<option value="28">28</option>
+			  	<option value="29">29</option>
+			  	<option value="30">30</option>
+			  	<option value="31">31</option>
+			  	<option value="32">32</option>
+			  	<option value="33">33</option>
+			  	<option value="34">34</option>
+			  	<option value="35">35</option>
+			  	<option value="36">36</option>
+			  	<option value="37">37</option>
+			  	<option value="38">38</option>
+			  	<option value="39">39</option>
+			  	<option value="40">40</option>
+			  	<option value="41">41</option>
+			  	<option value="42">42</option>
+			  	<option value="43">43</option>
+			  	<option value="44">44</option>
+			  	<option value="45">45</option>
+			  	<option value="46">46</option>
+			  	<option value="47">47</option>
+			  	<option value="48">48</option>
+			  	<option value="49">49</option>
+			  	<option value="50">50</option>
+			  	<option value="51">51</option>
+			  	<option value="52">52</option>
+			  	<option value="53">53</option>
+			  	<option value="54">54</option>
+			  	<option value="55">55</option>
+			  	<option value="56">56</option>
+			  	<option value="57">57</option>
+			  	<option value="58">58</option>
+			  	<option value="59">59</option>
+			  	<option value="24">24</option>
+			  	
+			    </select>
+			    <span>分</span>
+			  <input type="button" value="确定" id="but_01"><br/>
+		     <span>对账日期：</span>
+			 <select id="sele_03">
+			  	<option value="2011">2011</option>
+			  	<option value="2012">2012</option>
+			  	<option value="2013">2013</option>
+			  	<option value="2014">2014</option>
+			  	<option value="2015" selected="selected">2015</option>
+			  	<option value="2016">2016</option>
+			  	<option value="2017">2017</option>
+			  	<option value="2018">2018</option>
+			    </select>
+			    <span>年</span>		
+			    <select id="sele_04">
+			  	<option value="01">01</option>
+			  	<option value="02">02</option>
+			  	<option value="03">03</option>
+			  	<option value="04">04</option>
+			  	<option value="05">05</option>
+			  	<option value="06">06</option>
+			  	<option value="07">07</option>
+			  	<option value="08">08</option>
+			  	<option value="09">09</option>
+			  	<option value="10">10</option>
+			  	<option value="11">11</option>
+			  	<option value="12"selected="selected">12</option>
+			    </select>
+			    <span>月</span>
+			    <input type="button" value="确定" id="but_02"><br/>
+			    左边月份： <input type="text" id="text_03">
+			  			<input type="button" value="确定" id="but_04"><span id='ccs'>注：左边月份=对账月份 - 1  单月份请加零</span><br/>
+			    <span>总收入:</span>
+			    <span>千位以上数字:</span>
+			    <input type="text" id="text_01">
+			    <span>百位以下数字:</span>
+			    <input type="text" id="text_02">
+			    
+			    <input type="button" value="确定" id="but_03">
+		</div>
+	</div>
+</body>
+</html>
